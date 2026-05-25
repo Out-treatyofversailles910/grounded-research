@@ -177,6 +177,6 @@ Apache 2.0 — same as Anthropic's official skill releases. Free to use, fork, a
 
 ## Author
 
-Built by [@sahilmoonpie](https://github.com/sahilmoonpie) — cybersecurity consultant, PKI architect, and occasional builder of things that make AI less confidently wrong.
+Built by [@moonpiesheldon1337](https://github.com/moonpiesheldon1337) — cybersecurity consultant, PKI architect, and occasional builder of things that make AI less confidently wrong.
 
 *Part of a growing collection of domain-focused Claude skills. Star the repo if it's useful — it helps others find it.*
